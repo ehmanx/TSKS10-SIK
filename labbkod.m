@@ -17,10 +17,11 @@ fft_signal = fft(signal);
 fft_signal = fft_signal(1:signal_l/2);
 
 % Beräkna vektorer som kommer att användas som axlar i grafer
-f_axel = sampel_frek/2*linspace(0, 1, signal_l/2);
+f_axel = (0:signal_l/2-1)*sampel_frek/signal_l;
 t_axel = linspace(0,signal_l/sampel_frek, signal_l);
 
 % Plotta |Y(f)| för att undersöka signalen i frekvsensspektrumet
+% figure;
 % plot(f_axel, abs(fft_signal));
 % title('Amplitud spektrum');
 % xlabel('Frekvens f [kHz]');
@@ -133,16 +134,16 @@ for n = 0: 0.1:pi/2
     disp(n)
     test = 2*pi*fc*t_axel.'+n;
 
-    % I/Q-demodulering
+    %I/Q-demodulering
     X_i = filter(B5, A5, eko_signal.*(2*cos(test.')));
     
     X_q = -filter(B5, A5, eko_signal.*(2*sin(test.')));
     
-    % Downsampla med 10 för att kunna lyssna
+    %Downsampla med 10 för att kunna lyssna
     i = downsample(X_i, 10);
     q = downsample(X_q, 10);
     
-    % Uppspelning
+    %Uppspelning
     soundsc(i, sampel_frek/10);
     %soundsc(q, sampel_frek/10);
     pause;
