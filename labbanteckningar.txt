@@ -1,0 +1,17 @@
+möjliga fc: 36, 74, 112 kHz
+
+fc = 112 kHz
+
+74 kHz vitt brus?
+
+f1<f2?
+om ja
+f1 = 102500  
+f2 = 102501
+
+T2-T1 =  390 ms (0,39 s)
+
+ordspråk Xi - en blind höna hittar också korn ibland
+ordspråk Xq - den som gapar efter mycket mister ofta hela stycket
+
+0.8
