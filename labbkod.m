@@ -134,7 +134,7 @@ end
 [B5,A5] = butter(10,bandbredd/(sampel_frek/2),'low');
 
 %% Fasvridningskonstant
-phi = 0.5; %pi/4 < phi < pi/3 
+phi = 0.5; %pi/7 < phi < pi/6 
 
 for n = 0: 0.1:pi/2
     disp(n)
