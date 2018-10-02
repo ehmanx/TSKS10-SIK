@@ -30,4 +30,4 @@ T2-T1 = 370ms (0,370 s)
 ordspråk Xi - äpplet faller inte långt från trädet
 ordspråk Xq - skrttar bäst som ksrattar sist
 
-phi = 0.2, 0.3, 0.4, 0.5
+phi = 0.5
